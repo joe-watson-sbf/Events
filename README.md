@@ -10,7 +10,7 @@ El servicio **API** es muy sencillo:
      
      ***URL : GET Method*** : http://localhost:8080/api/v1/instructor
      
- La lista de retorno:
+ Lista de retorno:
  
          [
             {
@@ -54,11 +54,12 @@ El servicio **API** es muy sencillo:
  
  2) CRUD de eventos
      
-     Crear eventos: 2 metodos son disponible para crear eventos
+ **Crear evento: 2 metodos son disponible para crear eventos**
      
       1 - Un solo evento:
       
        URL: http://localhost:8080/api/v1/event
+       Method: POST
        Json formato: 
        
                {
@@ -68,7 +69,7 @@ El servicio **API** es muy sencillo:
                    "description": "exemple!"
                }
 
-       Respuesta de retorno: 
+       Mensaje de retorno: 
          - En caso que sea exitoso: 
 
                {
@@ -83,8 +84,9 @@ El servicio **API** es muy sencillo:
               }
               
               
-       1 - Un lista de eventos:
+       2 - Un lista de eventos:
         URL: http://localhost:8080/api/v1/events
+        Method: POST
         Json formato: 
          
                 [
@@ -92,7 +94,7 @@ El servicio **API** es muy sencillo:
                         "start": "2021-06-24T13:00:00.681+00:00",
                         "end": "2021-06-28T14:00:00.681+00:00",
                         "type": "1 week off",
-                        "description": "Pause!"
+                        "description": "off!"
                     },
                     {
                         "start": "2021-06-28T13:00:00.681+00:00",
@@ -108,7 +110,7 @@ El servicio **API** es muy sencillo:
                     }
                 ]
 
-       Respuesta de retorno: 
+       Mensaje de retorno: 
        - En caso que sea exitoso: 
                     
                     {
@@ -120,5 +122,86 @@ El servicio **API** es muy sencillo:
                     {
                         "response": "Se dice dondé está la falla..."
                     }
+
+**Modificar evento**
+
+   URL: http://localhost:8080/api/v1/event
+   Method: PUT
+   Json formato: 
+      
+               {
+                   "start": "2021-07-15T13:00:00.681+00:00",
+                   "end": "2021-07-17T14:00:00.681+00:00",
+                   "type": "exemple",
+                   "description": "exemple!"
+               }
+
+       Mensaje de retorno: 
+         - En caso que sea exitoso: 
+
+               {
+                   "response": "Event Created!"
+               }
+               
+               
+       - Al contrario:
+        
+              {
+                  "response": "Se dice dondé está la falla..."
+              }
+
+
+
+**Eliminar evento**
+
+   URL: http://localhost:8080/api/v1/event
+   Method: DELETE
+   Json formato: 
+       
+        {
+            "id": 3,
+            "start": "2021-07-15T13:00:00.681+00:00",
+            "end": "2020-07-10T14:00:00.681+00:00",
+            "type": "exemple",
+            "description": "exemple!",
+            "duration": "0 days!",
+            "active": true
+        }
+        
+Mensaje de retorno: 
+
+        {
+            "response": "Event deleted!"
+        }
+
+   ó
+
+        {
+            "response": "Event not found!"
+        }
+
+
+**Obtener eventos**
+
+   URL: http://localhost:8080/api/v1/event
+   Method: GET
+   Json formato DE RETORNO: 
+       
+        [
+            {
+                "id": 1,
+                "start": "2021-06-24T13:00:00.681+00:00",
+                "end": "2021-06-28T14:00:00.681+00:00",
+                "type": "1 week off",
+                "description": "Pause!",
+                "duration": "4 days!",
+                "enable": true
+            }
+        ]
+
+
+
+
+
 
 
