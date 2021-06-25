@@ -52,15 +52,15 @@ El servicio **API** es muy sencillo:
         
  _El servicio no se permite ingresar instructores, solo funciona con esos datos de ejemplos_
  
- 2) CRUD de eventos
+ **2) CRUD de eventos**
      
  **Crear evento: 2 metodos son disponible para crear eventos**
      
-   1 - Un solo evento:
+   _1 - Un solo evento:_
 
    URL: http://localhost:8080/api/v1/event
    
-   Method: POST
+   Method: **POST**
    
    Json formato: 
        
@@ -87,10 +87,13 @@ El servicio **API** es muy sencillo:
               }
               
               
-   2 - Un lista de eventos:
-    URL: http://localhost:8080/api/v1/events
-    Method: POST
-    Json formato: 
+   _2 - Un lista de eventos:_
+
+URL: http://localhost:8080/api/v1/events
+
+Method: **POST**
+
+Json formato: 
          
                 [
                     {
@@ -129,7 +132,7 @@ El servicio **API** es muy sencillo:
 **Modificar evento**
 
    URL: http://localhost:8080/api/v1/event
-   Method: PUT
+   Method: **PUT**
    Json formato: 
       
                {
@@ -158,7 +161,7 @@ El servicio **API** es muy sencillo:
 **Eliminar evento**
 
    URL: http://localhost:8080/api/v1/event
-   Method: DELETE
+   Method: **DELETE**
    Json formato: 
        
         {
@@ -187,7 +190,7 @@ Mensaje de retorno:
 **Obtener eventos**
 
    URL: http://localhost:8080/api/v1/event
-   Method: GET
+   Method: **GET**
    Json formato DE RETORNO: 
        
         [
