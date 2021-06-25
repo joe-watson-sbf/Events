@@ -43,7 +43,7 @@ public class Controller {
     }
 
     @DeleteMapping("/instructor/{idEvent}")
-    public void unassignEventToInstructor( @PathVariable int idEvent){
+    public void unassignEventToInstructor(@PathVariable int idEvent){
         service.deleteInstructorEvent(idEvent);
     }
 

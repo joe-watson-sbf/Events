@@ -89,7 +89,7 @@ public class Services {
         }
     }
 
-    public void deleteInstructorEvent( int idEvent){
+    public void deleteInstructorEvent(int idEvent){
         dao.deleteInstructorEvents(idEvent);
     }
 
