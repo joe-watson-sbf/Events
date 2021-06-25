@@ -8,7 +8,7 @@ El servicio **API** es muy sencillo:
 
  1) Hay 5 instructores con datos de ejemplos que el servicio va retornar en un formato Json:
      
-     ***URL : GET Method*** : http://localhost:8080/api/v1/instructor
+***URL : GET Method*** : http://localhost:8080/api/v1/instructor
      
  Lista de retorno:
  
@@ -56,11 +56,13 @@ El servicio **API** es muy sencillo:
      
  **Crear evento: 2 metodos son disponible para crear eventos**
      
-      1 - Un solo evento:
-      
-       URL: http://localhost:8080/api/v1/event
-       Method: POST
-       Json formato: 
+   1 - Un solo evento:
+
+   URL: http://localhost:8080/api/v1/event
+   
+   Method: POST
+   
+   Json formato: 
        
                {
                    "start": "2021-07-15T13:00:00.681+00:00",
@@ -69,25 +71,26 @@ El servicio **API** es muy sencillo:
                    "description": "exemple!"
                }
 
-       Mensaje de retorno: 
-         - En caso que sea exitoso: 
+   Mensaje de retorno: 
+   
+   - En caso que sea exitoso: 
 
                {
                    "response": "Event Created!"
                }
                
                
-       - Al contrario:
+   - Al contrario:
         
               {
                   "response": "Se dice dondé está la falla..."
               }
               
               
-       2 - Un lista de eventos:
-        URL: http://localhost:8080/api/v1/events
-        Method: POST
-        Json formato: 
+   2 - Un lista de eventos:
+    URL: http://localhost:8080/api/v1/events
+    Method: POST
+    Json formato: 
          
                 [
                     {
@@ -110,14 +113,14 @@ El servicio **API** es muy sencillo:
                     }
                 ]
 
-       Mensaje de retorno: 
-       - En caso que sea exitoso: 
+   Mensaje de retorno: 
+   - En caso que sea exitoso: 
                     
                     {
                         "response": "Event Created!"
                     }
                     
-       - Al contrario:
+   - Al contrario:
         
                     {
                         "response": "Se dice dondé está la falla..."
@@ -136,15 +139,15 @@ El servicio **API** es muy sencillo:
                    "description": "exemple!"
                }
 
-       Mensaje de retorno: 
-         - En caso que sea exitoso: 
+  Mensaje de retorno: 
+    - En caso que sea exitoso: 
 
                {
                    "response": "Event Created!"
                }
                
                
-       - Al contrario:
+  - Al contrario:
         
               {
                   "response": "Se dice dondé está la falla..."
