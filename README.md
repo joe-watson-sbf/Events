@@ -58,29 +58,35 @@ El servicio **API** es muy sencillo:
      
       1 - Un solo evento:
       
-        URL: http://localhost:8080/api/v1/event
-        Json formato: 
-          {
-              "start": "2021-07-15T13:00:00.681+00:00",
-              "end": "2021-07-17T14:00:00.681+00:00",
-              "type": "exemple",
-              "description": "exemple!"
-          }
+       URL: http://localhost:8080/api/v1/event
+       Json formato: 
+       
+               {
+                   "start": "2021-07-15T13:00:00.681+00:00",
+                   "end": "2021-07-17T14:00:00.681+00:00",
+                   "type": "exemple",
+                   "description": "exemple!"
+               }
 
-         Respuesta de retorno: 
+       Respuesta de retorno: 
          - En caso que sea exitoso: 
-              {
-                  "response": "Event Created!"
-              }
-          - Al contrario:
+
+               {
+                   "response": "Event Created!"
+               }
+               
+               
+       - Al contrario:
+        
               {
                   "response": "Se dice dondé está la falla..."
               }
               
+              
        1 - Un lista de eventos:
-
-              URL: http://localhost:8080/api/v1/events
-              Json formato: 
+        URL: http://localhost:8080/api/v1/events
+        Json formato: 
+         
                 [
                     {
                         "start": "2021-06-24T13:00:00.681+00:00",
@@ -102,12 +108,15 @@ El servicio **API** es muy sencillo:
                     }
                 ]
 
-               Respuesta de retorno: 
-               - En caso que sea exitoso: 
+       Respuesta de retorno: 
+       - En caso que sea exitoso: 
+                    
                     {
                         "response": "Event Created!"
                     }
-                - Al contrario:
+                    
+       - Al contrario:
+        
                     {
                         "response": "Se dice dondé está la falla..."
                     }
