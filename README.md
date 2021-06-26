@@ -2,7 +2,8 @@
 
 Aplicación desarrollado con **Spring Boot Framework** usando MySQL para la persistencia de los datos
 
-Clonar el repositorio https://github.com/joe-watson-sbf/Events.git o descargarlo normal en el boton de descargar : ![image](https://user-images.githubusercontent.com/49710538/123399527-52f57600-d56a-11eb-8d9d-c59aa559f50d.png)
+Clonar el repositorio https://github.com/joe-watson-sbf/Events.git o descargarlo normal en el boton de descargar :
+![image](https://user-images.githubusercontent.com/49710538/123399527-52f57600-d56a-11eb-8d9d-c59aa559f50d.png)
 
 El servicio **API** es muy sencillo:
 
@@ -49,7 +50,20 @@ El servicio **API** es muy sencillo:
                 "events": []
             }
         ]
-        
+ 
+ _Tambien se puede obtener un instructor por su id_
+      URL: http://localhost:8080/api/v1/instructor/{idInstructor}
+      Method: **POST**
+       
+              {
+                    "id": 5,
+                    "firstName": "Kim",
+                    "lastName": "Anderson",
+                    "birthday": "14/09/1992",
+                    "events": []
+              }
+
+
  _El servicio no se permite ingresar instructores, solo funciona con esos datos de ejemplos_
  
  **2) CRUD de eventos**
@@ -208,6 +222,17 @@ Mensaje de retorno:
 
 
 
+**Se puede asignar eventos a cada instructores, pero los eventos tienen que ser diferentes**
+    URL: http://localhost:8080/api/v1/instructor/{idInstructor}/{idEvent}
+    Method: **POST**
+    Mensaje DE RETORNO:
 
+        {
+            "response": "Event assigned!"
+        }
 
+ De lo contrario:
 
+        {
+            "response": "You can't assigns this event, it's not enable!"
+        }

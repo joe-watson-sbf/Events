@@ -23,7 +23,7 @@ public class Services {
     private final String EVENT_DELETED = "Event deleted!";
     private final String EVENT_NOT_FOUND = "Event not found!";
     private final String EVENT_ASSIGNED = "Event assigned!";
-    private final String EVENT_NOT_ENABLE = "You can't assigns this event, it's not enable to assign!";
+    private final String EVENT_NOT_ENABLE = "You can't assigns this event, it's not enable!";
 
     @Autowired
     private AppDAO dao;

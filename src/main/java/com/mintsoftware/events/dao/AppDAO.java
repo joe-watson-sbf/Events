@@ -86,8 +86,6 @@ public class AppDAO {
                     event.setEnable(true);
                     eventRepository.save(event);
                 });
-
-
     }
 
     private List<EventDTO> getInstructorEvents(int idInstructor){
